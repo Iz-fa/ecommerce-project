@@ -1,6 +1,7 @@
 import axios from 'axios'; //cleaner way to make requests to the backend
 import {useEffect, useState} from 'react';
 import { Header } from '../components/Header';
+import {formatMoney} from '../utils/money';
 import './HomePage.css'
 
 // Backend stores the data(normaly on a different computer) so the user's computer doesnt have to store all the
@@ -9,21 +10,15 @@ import './HomePage.css'
 // This also helps when adding an item to the cart, so when the user uses a different computer, the cart would
 // still have the items inside
 
-export function HomePage() {
+export function HomePage({cart}) {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
+    
 
     useEffect(()=>{   //the <StrictMode> in main.jsx makes useEffect run twice
         axios.get('/api/products')      //this is an easier way instead of fetch .. .then response.json().then
             .then((response)=>{
                 setProducts(response.data); 
             });
-
-        axios.get('/api/cart-items')
-            .then((response)=>{
-                setCart(response.data);
-            });
-
     }, []);
     
 
@@ -56,7 +51,7 @@ export function HomePage() {
                                 </div>
 
                                 <div className="product-price">
-                                    ${(product.priceCents / 100).toFixed(2)}
+                                    {formatMoney(product.priceCents)}
                                 </div>
 
                                 <div className="product-quantity-container">
