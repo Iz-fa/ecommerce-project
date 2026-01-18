@@ -1,5 +1,5 @@
 import {Link} from 'react-router'; //go to another page without reloading
-import './header.css';
+import './Header.css';
 
 export function Header({cart}) {
     let totalQuantity = 0;
