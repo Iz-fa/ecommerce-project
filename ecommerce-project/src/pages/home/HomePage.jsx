@@ -10,7 +10,7 @@ import './HomePage.css'
 // This also helps when adding an item to the cart, so when the user uses a different computer, the cart would
 // still have the items inside
 
-export function HomePage({cart}) {
+export function HomePage({cart, loadCart}) {
     const [products, setProducts] = useState([]);
     
     
@@ -39,7 +39,7 @@ export function HomePage({cart}) {
             <Header cart ={cart}/>
 
             <div className="home-page">
-                <ProductsGrid products = {products}/>
+                <ProductsGrid products = {products} loadCart = {loadCart}/>
             </div>
         </>
     );
