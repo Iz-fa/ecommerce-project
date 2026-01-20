@@ -1,3 +1,5 @@
+// This is a Unit test
+
 import {it, expect, describe} from 'vitest';    //it = creates a test, describe groups tests together
 import {formatMoney} from './money';
 
