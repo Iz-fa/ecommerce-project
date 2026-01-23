@@ -11,7 +11,19 @@ import './Header.css';
 // But having no space like .orders-link.active
 // means both classes should be in the same classname
 
-export function Header({ cart }) {
+// This is a type alias = works like a variable, but for types
+// in this type alias we gave it the value of an object 
+// This object has an array of objects {}[] in it called cart
+// we then set what properties each object has and gave them each their types
+type HeaderProps = {
+    cart: {
+        productId: string;
+        quantity: number;
+        deliveryOptionId: string;
+    }[];
+};
+
+export function Header({ cart }: HeaderProps) {
     const navigate = useNavigate();
 
     const [searchParams] = useSearchParams();
@@ -24,7 +36,7 @@ export function Header({ cart }) {
     // it will use a default value of ''.
     const [search, setSearch] = useState(searchText || '');
 
-    const updateSearchInput = (event) => {
+    const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value);
     };
 

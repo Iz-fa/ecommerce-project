@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   const [cart, setCart] = useState([]);
 
-  window.axios= axios;  //  
+  window.axios= axios;    
   // this makes axios available in the console, shortcut for window.axios: "axios"
   // window is the browser window
 
