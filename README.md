@@ -5,13 +5,13 @@ The website is already published and can be opened here: http://ecommerce-projec
 
 In case of cloning the project (Running it locally), please follow the steps bellow
 
+## Clone the Repository
+
 Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - npm (comes with Node.js)
 - Git
-
-## Clone the Repository
 
 Open a terminal and run:
 git clone https://github.com/Iz-fa/Chatbot.git](https://github.com/Iz-fa/Ecommerce.git
