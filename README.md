@@ -1,4 +1,4 @@
-# Chatbot
+# Ecommerce
 This code runs an online store.
 
 The website is already published and can be opened here: http://ecommerce-project-react-env.eba-9kp2yauw.us-east-1.elasticbeanstalk.com
