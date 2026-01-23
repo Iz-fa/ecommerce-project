@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-//its better to restart npm run dev after changing the vite.config.js
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react({
